@@ -1,10 +1,7 @@
 {
    "name": "@arghyad/react-email-autocomplete",
-   "version": "2.0",
-   "private": false,
-   "bugs": {
-      "url": "https://github.com/NemesisLW/react-email-autocomplete/issues"
-   },
+   "version": "2.0.0",
+   "private":"false",
    "description": "Headless email input field with custom suggestions. Inspired by european flight booking websites.",
    "keywords": [
       "react",
@@ -25,33 +22,6 @@
    },
    "license": "MIT",
    "author": "Arghya Dutta <arghyadutta119@gmail.com>",
-   "main": "dist/index.js",
-   "module": "dist/index.mjs",
-   "types": "dist/index.d.ts",
-   "files": [
-      "dist/*"
-   ],
-   "exports": {
-      ".": {
-         "import": "./dist/index.mjs",
-         "require": "./dist/index.js",
-         "types": "./dist/index.d.ts"
-      }
-   },
-   "scripts": {
-      "build": "tsc && vite build",
-      "build:app": "tsc && vite build --mode app",
-      "dev": "vite",
-      "preview": "vite preview",
-      "test:unit": "vitest",
-      "test": "cypress run --component --browser chrome",
-      "test:gui": "cypress open --component",
-      "prepare": "husky install"
-   },
-   "lint-staged": {
-      "*.{ts,tsx}": "eslint --cache --fix",
-      "*.{ts,tsx,css,json,md}": "prettier --write"
-   },
    "devDependencies": {
       "@types/node": "^20.10.6",
       "@types/react": "^18.2.43",
