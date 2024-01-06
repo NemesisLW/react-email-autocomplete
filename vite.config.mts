@@ -4,10 +4,17 @@ import dts from 'vite-plugin-dts'
 import react from '@vitejs/plugin-react'
 import Package from './package.json'
 
+import path from 'path'
+
 export default defineConfig(({ command, mode }) => {
    if (mode === 'app') {
       return {
          plugins: [react()],
+         resolve: {
+            alias: {
+               '@': path.resolve(__dirname, './src'),
+            },
+         },
       }
    }
    return {
@@ -40,5 +47,10 @@ export default defineConfig(({ command, mode }) => {
             rollupTypes: true,
          }),
       ],
+      resolve: {
+         alias: {
+            '@': path.resolve(__dirname, './src'),
+         },
+      },
    }
 })

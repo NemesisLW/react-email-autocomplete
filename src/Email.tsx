@@ -2,6 +2,7 @@ import React, { forwardRef, useCallback, useEffect, useId, useRef, useState } fr
 import { flushSync } from 'react-dom'
 import { cleanValue, getHonestValue, isFn, alphanumericKeys, getEmailData } from './utils'
 import { Events, OnSelectData, Elements, Maybe, EmailProps } from './types'
+import { Input } from './components/ui/input'
 
 /**
  * Controlled email input component.
@@ -397,7 +398,7 @@ export const Email = forwardRef<HTMLInputElement, EmailProps>(
 
       return (
          <div ref={wrapperRef} {...getWrapperClass()}>
-            <input
+            <Input
                {...inputAttrs}
                ref={(input) => mergeRefs(input as HTMLInputElement)}
                onChange={(e) => handleEmailChange(e)}
@@ -405,7 +406,9 @@ export const Email = forwardRef<HTMLInputElement, EmailProps>(
                value={email}
                type={inputType}
                role={suggestions.length > 0 ? 'combobox' : ''}
-               autoComplete="off"
+               autoComplete="email"
+               autoCapitalize="none"
+               autoCorrect="off"
                aria-autocomplete="list"
                {...(isOpen ? { 'aria-controls': listId } : {})}
                {...getClasses(Elements.Input)}

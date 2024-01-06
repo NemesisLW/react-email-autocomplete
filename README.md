@@ -1,11 +1,13 @@
-# React Email Autocomplete
+# React Email Autocomplete-Shadcn-Input
 
-![npm](https://img.shields.io/npm/v/@smastrom/react-email-autocomplete?color=46c119) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/smastrom/react-email-autocomplete/tests.yml?branch=main&label=tests)
+Forked from https://github.com/smastrom/react-email-autocomplete
+
+![npm](https://img.shields.io/npm/v/@arghyad/react-email-autocomplete?color=46c119) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/arghyad/react-email-autocomplete/tests.yml?branch=main&label=tests)
 ![dependency-count](https://img.shields.io/badge/dependency%20count-0-success)
 
 | Before typing `@`                                                                                       | After typing `@` (optional)                                                                             |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| ![@smastrom/react-email-autocomplete](https://i.ibb.co/SNTkHJQ/Screenshot-2022-12-07-alle-13-50-59.png) | ![@smastrom/react-email-autocomplete](https://i.ibb.co/DWQBQw7/Screenshot-2022-12-07-alle-13-54-23.png) |
+| ![@arghyad/react-email-autocomplete](https://i.ibb.co/SNTkHJQ/Screenshot-2022-12-07-alle-13-50-59.png) | ![@arghyad/react-email-autocomplete](https://i.ibb.co/DWQBQw7/Screenshot-2022-12-07-alle-13-54-23.png) |
 
 <br />
 
@@ -15,16 +17,16 @@
 - Fully accessible with superlative keyboard controls
 - Forward any event and attribute to the `<input />` element or control it with React Hook Form
 
-[Demo and examples](https://@smastrom/react-email-autocomplete.netlify.app) — [Stackblitz](https://stackblitz.com/edit/react-4kufqv?file=src/App.js) — [NextJS](https://stackblitz.com/edit/stackblitz-starters-f36nmm?file=app%2Fpage.tsx)
+[Demo and examples](https://@arghyad/react-email-autocomplete.netlify.app) — [Stackblitz](https://stackblitz.com/edit/react-4kufqv?file=src/App.js) — [NextJS](https://stackblitz.com/edit/stackblitz-starters-f36nmm?file=app%2Fpage.tsx)
 
 <br />
 
 ## :floppy_disk: Installation
 
 ```bash
-pnpm add @smastrom/react-email-autocomplete
-# npm i @smastrom/react-email-autocomplete
-# yarn add @smastrom/react-email-autocomplete
+pnpm add @arghyad/react-email-autocomplete
+# npm i @arghyad/react-email-autocomplete
+# yarn add @arghyad/react-email-autocomplete
 ```
 
 <br />
@@ -44,7 +46,7 @@ Wrapper — div
 Specify `classNames` for each element you'd like to style:
 
 ```jsx
-import { Email } from '@smastrom/react-email-autocomplete'
+import { Email } from '@arghyad/react-email-autocomplete'
 
 const classNames = {
   wrapper: 'my-wrapper',
@@ -80,7 +82,7 @@ function App() {
 'use client'
 
 import { useState } from 'react'
-import { Email as EmailAutocomplete } from '@smastrom/react-email-autocomplete'
+import { Email as EmailAutocomplete } from '@arghyad/react-email-autocomplete'
 
 const classNames = {
   wrapper: 'my-wrapper',
@@ -129,7 +131,7 @@ export default function Home() {
 <br />
 
 ```ts
-import type { ClassNames } from '@smastrom/react-email-autocomplete'
+import type { ClassNames } from '@arghyad/react-email-autocomplete'
 
 const myClassNames: ClassNames = {
   wrapper: 'my-wrapper',
@@ -235,10 +237,10 @@ Once users start typing, it displays a list of _base_ suggestions and hides it o
 
 | Before typing `@`                                                                                       | After typing `@`                                                                                        |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| ![@smastrom/react-email-autocomplete](https://i.ibb.co/SNTkHJQ/Screenshot-2022-12-07-alle-13-50-59.png) | ![@smastrom/react-email-autocomplete](https://i.ibb.co/ZgWCPkg/Screenshot-2022-12-07-alle-13-52-46.png) |
+| ![@arghyad/react-email-autocomplete](https://i.ibb.co/SNTkHJQ/Screenshot-2022-12-07-alle-13-50-59.png) | ![@arghyad/react-email-autocomplete](https://i.ibb.co/ZgWCPkg/Screenshot-2022-12-07-alle-13-52-46.png) |
 
 ```jsx
-import { Email } from '@smastrom/react-email-autocomplete'
+import { Email } from '@arghyad/react-email-autocomplete'
 
 const baseList = [
   'gmail.com',
@@ -268,12 +270,12 @@ Acts like **Basic Mode** until users type `@` . Then as they start typing the do
 
 | Before typing `@`                                                                                       | After typing `@`                                                                                        |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| ![@smastrom/react-email-autocomplete](https://i.ibb.co/SNTkHJQ/Screenshot-2022-12-07-alle-13-50-59.png) | ![@smastrom/react-email-autocomplete](https://i.ibb.co/DWQBQw7/Screenshot-2022-12-07-alle-13-54-23.png) |
+| ![@arghyad/react-email-autocomplete](https://i.ibb.co/SNTkHJQ/Screenshot-2022-12-07-alle-13-50-59.png) | ![@arghyad/react-email-autocomplete](https://i.ibb.co/DWQBQw7/Screenshot-2022-12-07-alle-13-54-23.png) |
 
-All you have to do is to provide a second array of domains to `refineList` prop. This package ships with a [curated list](https://github.com/smastrom/@smastrom/react-email-autocomplete/blob/main/src/domains.json) of the ~160 most popular world domains that you can directly import and use (thanks to **@mailcheck**):
+All you have to do is to provide a second array of domains to `refineList` prop. This package ships with a [curated list](https://github.com/arghyad/@arghyad/react-email-autocomplete/blob/main/src/domains.json) of the ~160 most popular world domains that you can directly import and use (thanks to **@mailcheck**):
 
 ```jsx
-import { Email, domains } from '@smastrom/react-email-autocomplete'
+import { Email, domains } from '@arghyad/react-email-autocomplete'
 
 const baseList = [
   'gmail.com',
@@ -338,7 +340,7 @@ export const emailProviders = {
 <br />
 
 ```ts
-import type { LocalizedList } from '@smastrom/react-email-autocomplete'
+import type { LocalizedList } from '@arghyad/react-email-autocomplete'
 
 export const emailProviders: LocalizedList = {
   default: [
@@ -365,7 +367,7 @@ If you define both `it-CH` and `it`, `it-CH` will match only `it-CH` and `it` wi
 **2 - Use the hook:**
 
 ```jsx
-import { Email, useLocalizedList } from '@smastrom/react-email-autocomplete'
+import { Email, useLocalizedList } from '@arghyad/react-email-autocomplete'
 import { emailProviders } from '@/src/static/locales'
 
 function App() {
@@ -389,7 +391,7 @@ To manually set the locale, pass its code as second argument:
 ```jsx
 import { useRouter } from 'next/router'
 import { emailProviders } from '@/src/static/locales'
-import { Email, useLocalizedList } from '@smastrom/react-email-autocomplete'
+import { Email, useLocalizedList } from '@arghyad/react-email-autocomplete'
 
 function App() {
   const { locale } = useRouter()
@@ -417,7 +419,7 @@ Or with NextJS App router:
 import {
   Email as EmailAutocomplete,
   useLocalizedList,
-} from '@smastrom/react-email-autocomplete'
+} from '@arghyad/react-email-autocomplete'
 import { emailProviders } from '@/static/locales'
 
 export function Email({ lang }: { lang: string }) {
@@ -460,7 +462,7 @@ export default function Home() {
 To invoke a callback everytime a suggestion is selected (either with mouse or keyboard), pass a callback to `onSelect` prop:
 
 ```jsx
-import { Email } from '@smastrom/react-email-autocomplete'
+import { Email } from '@arghyad/react-email-autocomplete'
 
 function handleSelect(data) {
   console.log(data) // { value: 'johndoe@gmail.com', keyboard: true, position: 0 }

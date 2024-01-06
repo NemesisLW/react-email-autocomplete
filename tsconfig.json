@@ -3,6 +3,10 @@
       "target": "es2020",
       "useDefineForClassFields": true,
       "lib": ["DOM", "DOM.Iterable", "ES2020"],
+      "baseUrl": ".",
+      "paths": {
+         "@/*": ["./src/*"]
+      },
       "allowJs": false,
       "skipLibCheck": true,
       "allowSyntheticDefaultImports": true,
